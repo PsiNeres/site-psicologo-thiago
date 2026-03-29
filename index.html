@@ -167,14 +167,6 @@
       letter-spacing: -0.05em;
     }
 
-    .hero-lead {
-      margin: 20px 0 0;
-      max-width: 670px;
-      color: #57534e;
-      font-size: 1.12rem;
-      line-height: 1.8;
-    }
-
     .hero-sub {
       margin: 14px 0 0;
       color: var(--muted);
@@ -184,98 +176,83 @@
     .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 
     .photo-card {
-  position: relative;
-  background: white;
-  border: 1px solid rgba(231, 229, 228, 0.9);
-  border-radius: 36px;
-  padding: 14px 14px 24px; /* mais respiro embaixo */
-  box-shadow:
-    0 30px 60px rgba(28, 25, 23, 0.10),
-    0 8px 20px rgba(28, 25, 23, 0.06);
-  overflow: hidden; /* importante pro efeito premium */
-}
+      position: relative;
+      background: white;
+      border: 1px solid rgba(231, 229, 228, 0.9);
+      border-radius: 36px;
+      padding: 14px 14px 24px;
+      box-shadow:
+        0 30px 60px rgba(28, 25, 23, 0.10),
+        0 8px 20px rgba(28, 25, 23, 0.06);
+      overflow: hidden;
+    }
 
-.photo-card img {
-  border-radius: 28px;
-  height: 560px;
-  object-fit: cover;
-  background: linear-gradient(135deg, #ddd6ce, #f5f5f4);
-}
+    .photo-card img {
+      border-radius: 28px;
+      height: 560px;
+      object-fit: cover;
+      background: linear-gradient(135deg, #ddd6ce, #f5f5f4);
+    }
 
-/* CARD SOBRE A FOTO */
-.photo-overlay {
-  position: absolute;
-  left: 20px;
-  right: 20px;
-  bottom: 28px; /* mais afastado da borda */
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  border-radius: 24px;
-  padding: 18px 20px;
-  box-shadow:
-    0 20px 40px rgba(17, 24, 39, 0.12),
-    0 6px 14px rgba(17, 24, 39, 0.06);
-}
+    .photo-overlay {
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      bottom: 28px;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      border-radius: 24px;
+      padding: 18px 20px;
+      box-shadow:
+        0 20px 40px rgba(17, 24, 39, 0.12),
+        0 6px 14px rgba(17, 24, 39, 0.06);
+    }
 
-/* brilho sutil (efeito vidro premium) */
-.photo-overlay::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 24px;
-  background: linear-gradient(
-    180deg,
-    rgba(255,255,255,0.35) 0%,
-    rgba(255,255,255,0.08) 40%,
-    rgba(255,255,255,0.00) 100%
-  );
-  pointer-events: none;
-}
+    .photo-overlay::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 24px;
+      background: linear-gradient(
+        180deg,
+        rgba(255,255,255,0.35) 0%,
+        rgba(255,255,255,0.08) 40%,
+        rgba(255,255,255,0.00) 100%
+      );
+      pointer-events: none;
+    }
 
-/* TEXTO */
-.photo-overlay small {
-  font-size: 0.9rem; /* 👈 maior */
-  color: #374151; /* 👈 mais contraste */
-  display: block;
-  font-weight: 600; /* 👈 mais presença */
-  letter-spacing: -0.01em;
-}
+    .photo-overlay small {
+      font-size: 0.95rem;
+      color: #374151;
+      display: block;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      position: relative;
+      z-index: 1;
+    }
 
-.photo-overlay strong {
-  display: block;
-  margin-top: 4px;
-  font-size: 1.2rem; /* destaque no nome */
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: #111827;
-}
+    .photo-overlay strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #1f2937;
+      position: relative;
+      z-index: 1;
+    }
 
-.photo-overlay p {
-  font-size: 0.82rem;
-  color: #57534e;
-  margin-top: 8px;
-  line-height: 1.5;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .photo-card img {
-    height: 420px;
-  }
-
-  .photo-overlay {
-    left: 16px;
-    right: 16px;
-    bottom: 24px;
-    padding: 16px;
-  }
-
-  .photo-overlay strong {
-    font-size: 1.08rem;
-  }
-}
+    .photo-overlay p {
+      font-size: 0.82rem;
+      color: #57534e;
+      margin-top: 8px;
+      line-height: 1.5;
+      position: relative;
+      z-index: 1;
+    }
 
     section { padding: 34px 0; }
 
@@ -433,7 +410,7 @@
       color: rgba(255,255,255,0.92);
     }
 
-    .booking-actions { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 20px; }
+    .booking-actions { display: none; }
 
     .contact-panel h3 { margin-top: 0; font-size: 1.35rem; letter-spacing: -0.03em; }
     .contact-meta { color: var(--muted); font-size: 0.95rem; margin-bottom: 16px; }
@@ -560,13 +537,31 @@
       .resource-grid,
       .mini-grid,
       .booking-notes,
-      .booking-actions,
       .trust-grid,
       .contact-actions {
         grid-template-columns: 1fr;
       }
 
-      .photo-card img { height: 440px; }
+      .photo-card img { height: 420px; }
+      .photo-overlay {
+        left: 16px;
+        right: 16px;
+        bottom: 24px;
+        padding: 16px;
+      }
+
+      .photo-overlay small {
+        font-size: 0.86rem;
+      }
+
+      .photo-overlay strong {
+        font-size: 1.02rem;
+      }
+
+      .photo-overlay p {
+        font-size: 0.78rem;
+      }
+
       .nav, .nav-actions { display: none; }
       .mobile-toggle { display: inline-grid; place-items: center; }
       .topbar-inner { min-height: 72px; }
@@ -591,12 +586,12 @@
         <a href="#atendimento">Atendimento</a>
         <a href="#agendar">Agendar</a>
         <a href="#faq">Dúvidas</a>
-        <a href="#livros">Livros e recursos</a>
+        <a href="#livros">Livro</a>
       </nav>
 
       <div class="nav-actions">
         <a class="btn btn-secondary" href="https://instagram.com/psicologothiagoneres" target="_blank" rel="noreferrer">Instagram</a>
-        <a class="btn btn-primary" href="https://wa.me/5562993939216?text=Olá,%20Thiago.%20Vi%20seu%20site%20e%20gostaria%20de%20saber%20como%20funciona%20o%20atendimento." target="_blank" rel="noreferrer">Agendar pelo WhatsApp</a>
+        <a class="btn btn-primary" href="https://wa.me/5562993939216?text=Olá,%20Thiago.%20Vi%20seu%20site%20e%20gostaria%20de%20falar%20sobre%20o%20atendimento." target="_blank" rel="noreferrer">Falar com o psicólogo agora</a>
       </div>
 
       <button class="mobile-toggle" id="menuBtn" aria-label="Abrir menu">☰</button>
@@ -606,7 +601,7 @@
       <a href="#atendimento">Atendimento</a>
       <a href="#agendar">Agendar</a>
       <a href="#faq">Dúvidas</a>
-      <a href="#livros">Livros e recursos</a>
+      <a href="#livros">Livro</a>
       <a href="https://instagram.com/psicologothiagoneres" target="_blank" rel="noreferrer">Instagram</a>
     </div>
   </header>
@@ -617,10 +612,10 @@
         <div>
           <div class="eyebrow">🌿 Atendimento online • ansiedade • saúde emocional</div>
           <h1>A ansiedade está dominando seus pensamentos?</h1>
-          <p class="hero-sub">Você não precisa enfrentar isso sozinho.</p>
-          <p class="hero-sub">Atendimento psicológico online com escuta qualificada, ética profissional, sigilo e foco em ansiedade.</p>
+          <p class="hero-sub">Se a ansiedade tem atrapalhado sua rotina, conversar pode ser o primeiro passo para recuperar o controle.</p>
+          <p class="hero-sub">Atendimento focado em ansiedade, com escuta qualificada e abordagem prática para o dia a dia.</p>
           <div class="hero-cta">
-            <a class="btn btn-primary" href="https://wa.me/5562993939216?text=Olá,%20Thiago.%20Vi%20seu%20site%20e%20gostaria%20de%20saber%20como%20funciona%20o%20atendimento." target="_blank" rel="noreferrer">💬 Agendar pelo WhatsApp</a>
+            <a class="btn btn-primary" href="https://wa.me/5562993939216?text=Olá,%20Thiago.%20Vi%20seu%20site%20e%20gostaria%20de%20falar%20sobre%20o%20atendimento." target="_blank" rel="noreferrer">💬 Falar com o psicólogo agora</a>
           </div>
         </div>
 
@@ -669,7 +664,7 @@
             <h2>Acolhimento, clareza e cuidado emocional</h2>
           </div>
           <p>Sou <strong>Thiago Neres da Silva</strong>, psicólogo clínico (CRP 09/012781) e especialista em avaliação psicológica.</p>
-          <p>Acompanho pessoas que vivem com ansiedade e desgaste emocional, ajudando-as a compreender o que estão sentindo e a desenvolver formas mais saudáveis de lidar com o dia a dia.</p>
+          <p>Meu trabalho é ajudar você a entender e organizar seus pensamentos, para que a ansiedade deixe de controlar suas decisões.</p>
           <p>O atendimento é conduzido com escuta qualificada, responsabilidade profissional e respeito à singularidade de cada pessoa.</p>
 
           <div class="trust-grid">
@@ -694,22 +689,22 @@
           <article class="card">
             <div class="icon-box">🧠</div>
             <h3>Ansiedade e saúde emocional</h3>
-            <p>Atendimento para pessoas que vivem com excesso de preocupações, tensão interna e desgaste emocional.</p>
-            <a href="#agendar">Agendar atendimento →</a>
+            <p>Atendimento para quem sente excesso de preocupações, mente acelerada e dificuldade para relaxar.</p>
+            <a href="https://wa.me/5562993939216?text=Olá,%20Thiago.%20Vi%20seu%20site%20e%20gostaria%20de%20falar%20sobre%20o%20atendimento." target="_blank" rel="noreferrer">Falar com o psicólogo agora →</a>
           </article>
 
           <article class="card">
             <div class="icon-box">🛡️</div>
             <h3>Avaliação psicológica</h3>
             <p>Processo técnico e cuidadoso para compreender aspectos emocionais, cognitivos e comportamentais.</p>
-            <a href="#agendar">Agendar atendimento →</a>
+            <a href="https://wa.me/5562993939216?text=Olá,%20Thiago.%20Vi%20seu%20site%20e%20gostaria%20de%20falar%20sobre%20o%20atendimento." target="_blank" rel="noreferrer">Falar com o psicólogo agora →</a>
           </article>
 
           <article class="card">
             <div class="icon-box">💻</div>
             <h3>Atendimento online</h3>
-            <p>Sessões com acolhimento, praticidade e segurança para sua rotina.</p>
-            <a href="#agendar">Agendar atendimento →</a>
+            <p>Sessões com acolhimento, praticidade e sigilo, realizadas de forma segura.</p>
+            <a href="https://wa.me/5562993939216?text=Olá,%20Thiago.%20Vi%20seu%20site%20e%20gostaria%20de%20falar%20sobre%20o%20atendimento." target="_blank" rel="noreferrer">Falar com o psicólogo agora →</a>
           </article>
         </div>
       </div>
@@ -746,7 +741,7 @@
           <p>Se você chegou até aqui, provavelmente algo tem pesado no seu dia a dia. Conversar pode ser um primeiro passo importante.</p>
         </div>
         <div style="display:flex; justify-content:center; margin-top: 18px;">
-          <a class="btn btn-primary" href="https://wa.me/5562993939216?text=Olá,%20Thiago.%20Vi%20seu%20site%20e%20gostaria%20de%20falar%20sobre%20o%20atendimento." target="_blank" rel="noreferrer">Iniciar conversa pelo WhatsApp</a>
+          <a class="btn btn-primary" href="https://wa.me/5562993939216?text=Olá,%20Thiago.%20Vi%20seu%20site%20e%20gostaria%20de%20falar%20sobre%20o%20atendimento." target="_blank" rel="noreferrer">Falar com o psicólogo agora</a>
         </div>
       </div>
     </section>
@@ -757,18 +752,14 @@
           <div class="section-head" style="margin-bottom: 0;">
             <div class="mini">Agendamento</div>
             <h2>Agende seu atendimento pelo WhatsApp</h2>
-            <p>Atendimento com horários reduzidos. O primeiro contato pelo WhatsApp permite alinhar disponibilidade e esclarecer dúvidas.</p>
+            <p>Atendimento com horários organizados. O primeiro contato pelo WhatsApp permite alinhar disponibilidade e esclarecer dúvidas.</p>
           </div>
 
           <div class="booking-notes">
-            <div class="booking-note">Horários reduzidos e alinhados diretamente pelo WhatsApp</div>
+            <div class="booking-note">Horários previamente organizados</div>
             <div class="booking-note">Atendimento online com sigilo e segurança</div>
             <div class="booking-note">Primeiro contato simples, direto e sem burocracia</div>
             <div class="booking-note">Possibilidade de tirar dúvidas antes de agendar</div>
-          </div>
-
-          <div class="booking-actions">
-            <a class="btn btn-primary" href="https://wa.me/5562993939216?text=Olá,%20Thiago.%20Gostaria%20de%20agendar%20um%20horário%20e%20saber%20como%20funciona%20o%20atendimento." target="_blank" rel="noreferrer">Agendar pelo WhatsApp</a>
           </div>
         </div>
 
@@ -791,8 +782,8 @@
             </div>
 
             <div class="contact-actions">
-              <button type="submit" class="btn btn-primary">Enviar pelo WhatsApp</button>
-              <a class="btn btn-secondary" href="mailto:contato@seudominio.com.br">Enviar e-mail</a>
+              <button type="submit" class="btn btn-primary">Falar com o psicólogo agora</button>
+              <a class="btn btn-secondary" href="mailto:psi.thiagoneres@gmail.com">Enviar e-mail</a>
             </div>
           </form>
         </div>
@@ -809,7 +800,7 @@
         <div class="faq-grid">
           <article class="faq-item">
             <strong>Como funciona o agendamento?</strong>
-            <p>Você escolhe um horário disponível e pode seguir o contato de forma simples e direta.</p>
+            <p>Após o primeiro contato, os horários disponíveis são alinhados de forma simples e direta.</p>
           </article>
           <article class="faq-item">
             <strong>O atendimento é online?</strong>
@@ -826,50 +817,22 @@
     <section id="livros">
       <div class="container">
         <div class="section-head">
-          <div class="mini">Livros e recursos</div>
-          <h2>Materiais e recursos que podem apoiar o cuidado emocional</h2>
-          <p>Espaço para livros, materiais terapêuticos e recursos que podem contribuir para o desenvolvimento emocional no dia a dia.</p>
+          <div class="mini">Livro</div>
+          <h2>Material para apoiar o cuidado emocional</h2>
+          <p>Espaço para materiais que possam contribuir para o desenvolvimento emocional no dia a dia.</p>
         </div>
 
-        <div class="resource-grid">
+        <div class="resource-grid" style="grid-template-columns: 1fr; max-width: 380px;">
           <article class="resource-card">
             <div class="resource-cover">
               <div>
                 <div class="badge">📘 Destaque</div>
-                <h3>Guia Prático para Lidar com a Ansiedade</h3>
+                <h3>Guia prático para lidar com a ansiedade</h3>
               </div>
             </div>
             <div class="resource-copy">
               <strong>Em breve</strong>
-              <p>Área para livros, materiais terapêuticos ou itens que possam apoiar o cuidado emocional.</p>
-              <a class="btn btn-primary" href="#">Ver material</a>
-            </div>
-          </article>
-
-          <article class="resource-card">
-            <div class="resource-cover">
-              <div>
-                <div class="badge">🧩 Novo</div>
-                <h3>Livro 2</h3>
-              </div>
-            </div>
-            <div class="resource-copy">
-              <strong>Em breve</strong>
-              <p>Espaço para materiais de psicoeducação, recursos terapêuticos ou conteúdos educativos.</p>
-              <a class="btn btn-primary" href="#">Ver material</a>
-            </div>
-          </article>
-
-          <article class="resource-card">
-            <div class="resource-cover">
-              <div>
-                <div class="badge">✨ Recurso</div>
-                <h3>Livro 3</h3>
-              </div>
-            </div>
-            <div class="resource-copy">
-              <strong>Em breve</strong>
-              <p>Espaço para livros, recursos para sala infantil, materiais educativos ou produtos afiliados.</p>
+              <p>Material com orientações práticas para compreender e lidar melhor com a ansiedade no dia a dia.</p>
               <a class="btn btn-primary" href="#">Ver material</a>
             </div>
           </article>
