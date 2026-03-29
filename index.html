@@ -184,51 +184,96 @@
     .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 
     .photo-card {
-      position: relative;
-      background: white;
-      border: 1px solid rgba(231, 229, 228, 0.95);
-      border-radius: 36px;
-      padding: 14px;
-      box-shadow: 0 30px 60px rgba(28, 25, 23, 0.10);
-    }
-
-    .photo-card img {
-      border-radius: 28px;
-      height: 560px;
-      object-fit: cover;
-      background: linear-gradient(135deg, #ddd6ce, #f5f5f4);
-    }
-
-    .photo-overlay {
-  position: absolute;
-  left: 16px;
-  right: 16px;
-  bottom: 16px;
-  background: rgba(255,255,255,0.92);
-  backdrop-filter: blur(8px);
-  border-radius: 18px;
-  padding: 12px 14px;
-  box-shadow: 0 8px 20px rgba(28, 25, 23, 0.08);
+  position: relative;
+  background: white;
+  border: 1px solid rgba(231, 229, 228, 0.9);
+  border-radius: 36px;
+  padding: 14px 14px 24px; /* mais respiro embaixo */
+  box-shadow:
+    0 30px 60px rgba(28, 25, 23, 0.10),
+    0 8px 20px rgba(28, 25, 23, 0.06);
+  overflow: hidden; /* importante pro efeito premium */
 }
 
-    .photo-overlay small {
-  font-size: 0.75rem;
+.photo-card img {
+  border-radius: 28px;
+  height: 560px;
+  object-fit: cover;
+  background: linear-gradient(135deg, #ddd6ce, #f5f5f4);
+}
+
+/* CARD SOBRE A FOTO */
+.photo-overlay {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 28px; /* mais afastado da borda */
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 24px;
+  padding: 18px 20px;
+  box-shadow:
+    0 20px 40px rgba(17, 24, 39, 0.12),
+    0 6px 14px rgba(17, 24, 39, 0.06);
+}
+
+/* brilho sutil (efeito vidro premium) */
+.photo-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.35) 0%,
+    rgba(255,255,255,0.08) 40%,
+    rgba(255,255,255,0.00) 100%
+  );
+  pointer-events: none;
+}
+
+/* TEXTO */
+.photo-overlay small {
+  font-size: 0.72rem;
   color: #6b7280;
   display: block;
+  letter-spacing: 0.02em;
 }
 
 .photo-overlay strong {
   display: block;
-  margin-top: 2px;
-  font-size: 1.05rem;
-  letter-spacing: -0.01em;
+  margin-top: 4px;
+  font-size: 1.2rem; /* destaque no nome */
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #111827;
 }
 
 .photo-overlay p {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: #57534e;
-  margin-top: 6px;
-  line-height: 1.4;
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .photo-card img {
+    height: 420px;
+  }
+
+  .photo-overlay {
+    left: 16px;
+    right: 16px;
+    bottom: 24px;
+    padding: 16px;
+  }
+
+  .photo-overlay strong {
+    font-size: 1.08rem;
+  }
 }
 
     section { padding: 34px 0; }
