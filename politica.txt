@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidade | Thiago Neres da Silva</title>
+  <meta name="description" content="Política de Privacidade do site de Thiago Neres da Silva, Psicólogo Clínico." />
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f6f4ef;
+      color: #1c1917;
+      line-height: 1.7;
+    }
+
+    .container {
+      width: min(900px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 40px 0 60px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #e7e5e4;
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: 0 10px 30px rgba(28, 25, 23, 0.08);
+    }
+
+    h1, h2 {
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+    }
+
+    h1 { margin-top: 0; }
+    h2 { margin-top: 28px; }
+
+    a { color: inherit; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Política de Privacidade</h1>
+
+      <p>Esta Política de Privacidade descreve como os dados pessoais são coletados, utilizados e protegidos no site de Thiago Neres da Silva, Psicólogo Clínico (CRP 09/012781), em conformidade com a Lei nº 13.709/2018 (Lei Geral de Proteção de Dados Pessoais – LGPD).</p>
+
+      <h2>1. Coleta de dados</h2>
+      <p>Este site poderá coletar dados pessoais fornecidos voluntariamente pelo usuário por meio de formulários de contato, como nome, e-mail e mensagem enviada.</p>
+
+      <h2>2. Finalidade do uso dos dados</h2>
+      <p>Os dados coletados são utilizados exclusivamente para:</p>
+      <ul>
+        <li>responder mensagens enviadas pelo usuário;</li>
+        <li>realizar contato profissional;</li>
+        <li>esclarecer dúvidas sobre o atendimento;</li>
+        <li>viabilizar o agendamento de atendimento psicológico.</li>
+      </ul>
+
+      <h2>3. Proteção e confidencialidade</h2>
+      <p>As informações fornecidas são tratadas com confidencialidade, respeito à privacidade e observância dos princípios éticos da Psicologia, além das normas aplicáveis de proteção de dados.</p>
+
+      <h2>4. Compartilhamento de dados</h2>
+      <p>Os dados pessoais não são comercializados, divulgados ou compartilhados com terceiros, exceto quando necessário para o cumprimento de obrigação legal ou regulatória.</p>
+
+      <h2>5. Direitos do titular dos dados</h2>
+      <p>Nos termos da LGPD, o titular dos dados poderá solicitar, a qualquer momento:</p>
+      <ul>
+        <li>confirmação da existência de tratamento de dados;</li>
+        <li>acesso aos dados pessoais;</li>
+        <li>correção de dados incompletos, inexatos ou desatualizados;</li>
+        <li>eliminação dos dados, quando aplicável.</li>
+      </ul>
+
+      <h2>6. Contato</h2>
+      <p>Em caso de dúvidas sobre esta Política de Privacidade ou sobre o tratamento de dados pessoais, entre em contato pelo e-mail: <a href="mailto:psi.thiagoneres@gmail.com">psi.thiagoneres@gmail.com</a>.</p>
+
+      <h2>7. Atualizações</h2>
+      <p>Esta Política de Privacidade poderá ser atualizada a qualquer momento para adequação legal, ética ou técnica.</p>
+
+      <p><a href="index.html">Voltar ao site</a></p>
+    </div>
+  </div>
+</body>
+</html>
