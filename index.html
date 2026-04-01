@@ -3,8 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thiago Neres da Silva | Psicólogo para ansiedade e saúde emocional</title>
-  <meta name="description" content="Atendimento psicológico online com escuta qualificada, ética profissional e foco em ansiedade e saúde emocional." />
+
+  <title>Thiago Neres da Silva | Psicólogo para ansiedade | Atendimento online</title>
+  <meta name="description" content="Psicólogo especializado em ansiedade. Atendimento psicológico online com escuta qualificada, sigilo e abordagem prática para o dia a dia. Agende pelo WhatsApp." />
+  <meta name="keywords" content="psicólogo ansiedade, terapia ansiedade, psicólogo online, saúde emocional, ansiedade tratamento, psicólogo Goiânia online" />
+  <meta name="robots" content="index, follow" />
+
   <style>
     :root {
       --bg: #f6f4ef;
@@ -171,6 +175,7 @@
       margin: 14px 0 0;
       color: var(--muted);
       max-width: 660px;
+      line-height: 1.8;
     }
 
     .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
@@ -285,21 +290,19 @@
     .signal-grid,
     .cards-3,
     .faq-grid,
-    .resource-grid,
     .mini-grid {
       display: grid;
       gap: 14px;
     }
 
     .signal-grid { grid-template-columns: repeat(3, 1fr); }
-    .cards-3, .resource-grid { grid-template-columns: repeat(3, 1fr); }
+    .cards-3 { grid-template-columns: repeat(3, 1fr); }
     .mini-grid { grid-template-columns: repeat(2, 1fr); }
 
     .card,
     .signal,
     .mini-card,
-    .faq-item,
-    .resource-card {
+    .faq-item {
       background: white;
       border: 1px solid var(--line);
       border-radius: var(--radius);
@@ -410,8 +413,6 @@
       color: rgba(255,255,255,0.92);
     }
 
-    .booking-actions { display: none; }
-
     .contact-panel h3 { margin-top: 0; font-size: 1.35rem; letter-spacing: -0.03em; }
     .contact-meta { color: var(--muted); font-size: 0.95rem; margin-bottom: 16px; }
 
@@ -438,35 +439,6 @@
     .faq-item { padding: 22px 24px; }
     .faq-item strong { display: block; font-size: 1.08rem; margin-bottom: 8px; }
     .faq-item p { margin: 0; color: #57534e; }
-
-    .resource-card { overflow: hidden; }
-    .resource-cover {
-      height: 220px;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 20px;
-      color: white;
-      background: linear-gradient(135deg, #111827, #374151);
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      border: 1px solid rgba(255,255,255,0.18);
-      border-radius: 999px;
-      padding: 7px 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      font-size: 0.72rem;
-      opacity: 0.9;
-    }
-
-    .resource-cover h3 { margin: 16px 0 0; font-size: 1.55rem; line-height: 1.18; }
-    .resource-copy { padding: 24px; }
-    .resource-copy strong { font-size: 1.05rem; }
-    .resource-copy p { color: #57534e; line-height: 1.75; }
 
     .footer {
       border-top: 1px solid rgba(231,229,228,0.9);
@@ -534,7 +506,6 @@
       .booking-grid,
       .signal-grid,
       .cards-3,
-      .resource-grid,
       .mini-grid,
       .booking-notes,
       .trust-grid,
@@ -549,18 +520,9 @@
         bottom: 24px;
         padding: 16px;
       }
-
-      .photo-overlay small {
-        font-size: 0.86rem;
-      }
-
-      .photo-overlay strong {
-        font-size: 1.02rem;
-      }
-
-      .photo-overlay p {
-        font-size: 0.78rem;
-      }
+      .photo-overlay small { font-size: 0.86rem; }
+      .photo-overlay strong { font-size: 1.02rem; }
+      .photo-overlay p { font-size: 0.78rem; }
 
       .nav, .nav-actions { display: none; }
       .mobile-toggle { display: inline-grid; place-items: center; }
@@ -586,7 +548,6 @@
         <a href="#atendimento">Atendimento</a>
         <a href="#agendar">Agendar</a>
         <a href="#faq">Dúvidas</a>
-        <a href="#livros">Livro</a>
       </nav>
 
       <div class="nav-actions">
@@ -596,12 +557,12 @@
 
       <button class="mobile-toggle" id="menuBtn" aria-label="Abrir menu">☰</button>
     </div>
+
     <div class="container mobile-menu" id="mobileMenu">
       <a href="#sobre">Sobre</a>
       <a href="#atendimento">Atendimento</a>
       <a href="#agendar">Agendar</a>
       <a href="#faq">Dúvidas</a>
-      <a href="#livros">Livro</a>
       <a href="https://instagram.com/psicologothiagoneres" target="_blank" rel="noreferrer">Instagram</a>
     </div>
   </header>
@@ -611,9 +572,21 @@
       <div class="container hero-grid">
         <div>
           <div class="eyebrow">🌿 Atendimento online • ansiedade • saúde emocional</div>
+
           <h1>A ansiedade está dominando seus pensamentos?</h1>
-          <p class="hero-sub">Se a ansiedade tem atrapalhado sua rotina, conversar pode ser o primeiro passo para recuperar o controle.</p>
-          <p class="hero-sub">Atendimento focado em ansiedade, com escuta qualificada e abordagem prática para o dia a dia.</p>
+
+          <h2 style="font-size:1.1rem; font-weight:500; color:#6b7280;">
+            Psicólogo especializado em ansiedade • Atendimento psicológico online
+          </h2>
+
+          <p class="hero-sub">
+            Se a ansiedade tem afetado seu sono, sua rotina ou sua capacidade de se concentrar, conversar pode ser o primeiro passo para recuperar o controle.
+          </p>
+
+          <p class="hero-sub">
+            Atendimento focado em ansiedade, com escuta qualificada e abordagem prática para o dia a dia.
+          </p>
+
           <div class="hero-cta">
             <a class="btn btn-primary" href="https://wa.me/5562993939216?text=Olá,%20Thiago.%20Vi%20seu%20site%20e%20gostaria%20de%20falar%20sobre%20o%20atendimento." target="_blank" rel="noreferrer">💬 Falar com o psicólogo agora</a>
           </div>
@@ -689,22 +662,22 @@
           <article class="card">
             <div class="icon-box">🧠</div>
             <h3>Ansiedade e saúde emocional</h3>
-            <p>Atendimento para quem sente excesso de preocupações, mente acelerada e dificuldade para relaxar.</p>
-            <a href="https://wa.me/5562993939216?text=Olá,%20Thiago.%20Vi%20seu%20site%20e%20gostaria%20de%20falar%20sobre%20o%20atendimento." target="_blank" rel="noreferrer">Falar com o psicólogo agora →</a>
+            <p>Para quem sente preocupação constante, mente acelerada e dificuldade para relaxar.</p>
+            <a href="#agendar">Falar com o psicólogo agora →</a>
           </article>
 
           <article class="card">
             <div class="icon-box">🛡️</div>
             <h3>Avaliação psicológica</h3>
-            <p>Processo técnico e cuidadoso para compreender aspectos emocionais, cognitivos e comportamentais.</p>
-            <a href="https://wa.me/5562993939216?text=Olá,%20Thiago.%20Vi%20seu%20site%20e%20gostaria%20de%20falar%20sobre%20o%20atendimento." target="_blank" rel="noreferrer">Falar com o psicólogo agora →</a>
+            <p>Quando é necessário compreender com mais clareza aspectos emocionais, cognitivos e comportamentais.</p>
+            <a href="#agendar">Falar com o psicólogo agora →</a>
           </article>
 
           <article class="card">
             <div class="icon-box">💻</div>
             <h3>Atendimento online</h3>
-            <p>Sessões com acolhimento, praticidade e sigilo, realizadas de forma segura.</p>
-            <a href="https://wa.me/5562993939216?text=Olá,%20Thiago.%20Vi%20seu%20site%20e%20gostaria%20de%20falar%20sobre%20o%20atendimento." target="_blank" rel="noreferrer">Falar com o psicólogo agora →</a>
+            <p>Para quem busca acolhimento profissional com praticidade, sigilo e segurança.</p>
+            <a href="#agendar">Falar com o psicólogo agora →</a>
           </article>
         </div>
       </div>
@@ -752,7 +725,7 @@
           <div class="section-head" style="margin-bottom: 0;">
             <div class="mini">Agendamento</div>
             <h2>Agende seu atendimento pelo WhatsApp</h2>
-            <p>Atendimento com horários organizados. O primeiro contato pelo WhatsApp permite alinhar disponibilidade e esclarecer dúvidas.</p>
+            <p>Dar o primeiro passo pode ser mais simples do que parece. Pelo WhatsApp, você pode esclarecer dúvidas e alinhar um horário de forma direta.</p>
           </div>
 
           <div class="booking-notes">
@@ -813,32 +786,6 @@
         </div>
       </div>
     </section>
-
-    <section id="livros">
-      <div class="container">
-        <div class="section-head">
-          <div class="mini">Livro</div>
-          <h2>Material para apoiar o cuidado emocional</h2>
-          <p>Espaço para materiais que possam contribuir para o desenvolvimento emocional no dia a dia.</p>
-        </div>
-
-        <div class="resource-grid" style="grid-template-columns: 1fr; max-width: 380px;">
-          <article class="resource-card">
-            <div class="resource-cover">
-              <div>
-                <div class="badge">📘 Destaque</div>
-                <h3>Guia prático para lidar com a ansiedade</h3>
-              </div>
-            </div>
-            <div class="resource-copy">
-              <strong>Em breve</strong>
-              <p>Material com orientações práticas para compreender e lidar melhor com a ansiedade no dia a dia.</p>
-              <a class="btn btn-primary" href="#">Ver material</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
   </main>
 
   <div class="floating-wa">
@@ -851,7 +798,7 @@
       <div style="display:flex; gap:18px; flex-wrap:wrap;">
         <a href="https://instagram.com/psicologothiagoneres" target="_blank" rel="noreferrer">Instagram</a>
         <a href="https://wa.me/5562993939216?text=Olá,%20Thiago.%20Gostaria%20de%20saber%20mais%20sobre%20o%20atendimento%20psicológico." target="_blank" rel="noreferrer">WhatsApp</a>
-        <a href="#">Política de Privacidade</a>
+        <a href="politica.html">Política de Privacidade</a>
       </div>
     </div>
   </footer>
